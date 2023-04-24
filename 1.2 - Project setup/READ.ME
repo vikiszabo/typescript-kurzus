@@ -1,0 +1,17 @@
+## Projekt setup
+
+1. Hozz létre egy index.html file-t. Kezd el írni "html 5", majd nyomj entert, hogy a kód automatikusan kiegészüljön. Írd át a címet és adj script tag-et a "HEAD" részhez, aminek a forrása `src="app.js"`.
+2. Hozz létre egy app.ts fájlt.
+3. Majd fordítsd le a TypeScript fájlodat JavaScript fájlra: `tsc app.ts`
+4. `npm init`-tel hozd létre a package.json fájlt. Alapértelmezett értékekkel hozd létre.
+5. `npm install --save-dev lite-server`-rel telepítsd a lite-server-t.
+6. A package.json fájlban a "scripts" részhez add hozzá a következőt: `"start": "lite-server"`.
+7. `npm start`-tal indítsd el a lite-server-t.
+
+A fenti lépések után a böngészőben a http://localhost:3000 címen elérhető lesz az alkalmazásod.
+
+Ezt az alapbeállítást újra és újra felhasználhatjuk a példafeladatainkhoz a kurzus során. 
+A node_modules könyvtár nagy és könnyen létrehozható. Így ennek kivételével lemásolhatod a fájlokat és újrahasználhatod azokat.
+ 
+Elég `npm install` paranccsal telepíteni a függőségeket - ekkor jön létre a node_modules könyvtár -, 
+majd `npm start`-tal elindítani a lite-server-t újrahasználatkor.

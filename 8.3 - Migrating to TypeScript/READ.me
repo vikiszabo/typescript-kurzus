@@ -1,0 +1,33 @@
+## Migrating to TypeScript
+
+Szerencsére a TypeScript Compiler / TS fordító transpiler-ként is működik.
+Ez azt jelenti, hogy az új generációs JavaScript kódunkat régi böngészőkben is futtathatjuk azáltal, hogy régi JavaScript nyelvre fordítja.
+Tehát attól függően, milyen kódot kell migrálnunk, a TypeScript fordítója segítségével könnyen átírhatjuk a kódot úgy, hogy a régi böngészők is tudják futtatni.
+Első lépés, hogy modernizáljuk a JavaScript kódot.
+
+## Erre figyelj:
+
+- Írj modern, idiomatikus JavaScriptet.
+- Használj ECMAScript Modulokat, import-okat, export-okat. Állítsd be a webpack-et, vagy ts-node-ot.
+- Használj `class`-okat, prototype-ok helyett.
+- A `var` helyett használj a `let` és `const` kulcsszavakat.
+- Inkább arrow functions-t használj function expression-ok helyett.
+- Használj compact object literals-t és destructuring-ot.
+- Használj default function paramétereket.
+- Használj async/await-t, nyers Promise-ok és Callback-ek helyett.
+- Használj Map és Set-eket a for... of iterációk helyett.
+- Ne tegyél "use strict"-et a kódodba, a TypeScript fordítója automatikusan hozzáadja, sőt szigorúbb is annál.
+- Nézd meg a **[TC39 javaslatokat](https://github.com/tc39/proposals)** a legújabb ECMAScript feature-ökért.
+- Használjd a @ts-check és JSDoc annotációkat, hogy a TypeScript fordítója segítségével ellenőrizze a kódot.
+
+
+## Undeclared Globals
+
+## Unknown Libraries
+
+## Unknown Libraries
+
+## allowJS
+
+
+## noImplicitAny

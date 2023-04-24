@@ -1,0 +1,21 @@
+## Debug TypeScript
+
+A tsconfig.json fájlban a `sourceMap` tulajdonságot állítsuk `true`-ra. 
+
+```json
+{
+  "compilerOptions": {
+    "sourceMap": true
+  }
+}
+```
+Ezután a böngészőben a forráskódot meg tudjuk nyitni a `Sources` fülön.
+Az `index.ts` dőlt betűkkel jelenik meg, ami azt jelzi, hogy ez nem egy "igazi" fájl, hanem a sourceMap-on keresztül jön létre. 
+
+
+## Erre figyelj:
+
+- Ne debuggolj generált JavaScript fájlt. Használj sourceMap-et, hogy a forráskódodat tudd debuggolni futtatáskor.
+- Bizonyosodj meg róla, hogy a source map-jaid map-pelve vannak végig addig a kódik, amit futtatsz.
+- Attól fggően, hogy milyen beállításokat használsz, a source map-jaid tartalmazhatják a forráskódodat.
+Ne publikáld a forráskódot, ha nem akarod, hogy a felhasználók lássák.

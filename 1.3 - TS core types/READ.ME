@@ -1,0 +1,57 @@
+## TypeScript alap típusok 1
+
+- number (1, 5.3, -10) - minden szám, nincs különbség a tört és egész számok között
+- string ("alma", 'körte', `szilva`) - minden szöveg, a hármadik idézőjel közötti szöveg lehet több soros is
+- boolean (true, false) - nincs falsy és thruthy érték, csak true és false
+
+TypeScript típusrendszere nem dinamikus, hanem statikus. Ez azt jelenti, hogy a változók típusát a fordítás során meg kell adni, és a változó típusa nem változhat a futás során.
+
+A böngészők nem ismerik a TypeScript típusokat, ezért a TypeScript kódokat le kell fordítani JavaScript kódokká. A fordítás során a TypeScript típusok eltűnnek, és a változók típusa JavaScript-ben is dinamikus lesz.
+
+JavaScript-nek van typeof operátora.
+
+## Type assignment and type inference
+
+`let number1: number;` - type assignment, explicit type
+`let number1 = 1;` - type inference, implicit type
+
+## TypeScript alap típusok 2
+
+- object - minden objektum, például `{ a: 1 }`
+- array - minden tömb, például `[1, 2, 3]`
+- tuple - egy fix hosszúságú tömb, például `[1, "alma"]`
+- enum - egy felsorolás, például `enum Szín { Piros, Zöld, Kék }`
+
+
+## Tuple
+
+`let tuple1: [number, string] = [1, "alma"];`
+
+TypeScript nem tud elkapni egy kivételt: `tuple1.push(2)`, mivel JavaScript nem ismeri ezt a típust. Fix hosszúságú array-ként kezeli.
+
+
+## Any 
+
+Ne használd, ha lehet. A TypeScript fordító nem tudja ellenőrizni a kódot, ha any típusú változót használsz.
+
+
+
+
+
+
+
+## Union Types
+
+`let union1: number | string = 1;`
+
+## Literal Types
+
+`let literal1: "alma" | "körte" = "alma";`
+
+## Type Aliases / Custom Types
+
+`type NumberOrString = string | number;`
+
+`type Color = "piros" | "zöld" | "kék";`
+
+
